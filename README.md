@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="600" src="three.png" />
+    <img width="600" src="antlr.png" />
 </h1>
 
 
@@ -28,33 +28,41 @@ Este guia passo a passo descreve como criar uma simples gramática Hello World u
 
 ## Passo a Passo
 
+Codigo HelloWorld.py
+
 ### 1. Criar a Gramática ANTLR
 
-Defina a gramática no arquivo `HelloWorld.g4`:
-
-```antlr
-grammar HelloWorld;
-
-program : printStatement;
-
-printStatement : 'print' '(' STRING ')' ;
-
-STRING : '"' .*? '"' ;
-
-WS : [ \t\r\n]+ -> skip ;
+Definimos a gramática no arquivo `HelloWorld.g4`:
  
-## Sintaxe para executar:
+## 2. Gerar os Ficheiros Python com ANTLR
 
-<pre>docker compose up -d </pre>
+Utilizamos o seguinte comando para gerar os analisadores léxico e sintático em Python a partir da nossa gramática:
 
-Demo: [http://server.ivo.com.pt:8082](http://server.ivo.com.pt:8082)
+<pre>java -jar /caminho/para/antlr-4.x-complete.jar -Dlanguage=Python3 HelloWorld.g4 </pre>
+
+Certifique-se de substituir /caminho/para/antlr-4.x-complete.jar pelo caminho real onde o arquivo antlr-4.x-complete.jar está localizado no seu sistema.
+
+## 3. Preparar o Ambiente Python
+
+Instalamos as bibliotecas Python necessárias:
+
+<pre> pip install antlr4-python3-runtime networkx matplotlib </pre>
+
+## 4. Escrever e executar o Script de Teste em Python
+
+TesteHelloWorld.py. Este script carrega a entrada print("Hello, World!"), executa a análise sintática, e visualiza a árvore de análise resultante.
+
+<pre> python3 TesteHelloWorld.py </pre>
+
+Deve aparecer a mensagem "Detetado um comando Hello World!" impressa no console, seguida pela visualização da árvore de análise sintática
+
 
 Video: [https://youtu.be/Dbs-P95D0Q4](https://youtu.be/wdyRhklgEso)
 
-O projeto foi feito em Html, Javasript e Css
+O projeto foi feito em Python com ANTLR
 
 
-The project was done with Html, Javascript and Css
+The project was done with Python with ANTLR
 
 
 <img src="print.png" alt="page-home">
@@ -63,9 +71,9 @@ The project was done with Html, Javascript and Css
 🔧 Tecnologias utilizadas:
 ------------------
 
-- html
-- Javascript (biblioteca three.js)
-- Css
+- Python
+- ANTLR 
+- VS code
 
 💬 Fale comigo
 ------------------
