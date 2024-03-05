@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="600" src="antlr.png" />
+    <img width="400" src="antlr.png" />
 </h1>
 
 
