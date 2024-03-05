@@ -57,7 +57,7 @@ TesteHelloWorld.py. Este script carrega a entrada print("Hello, World!"), execut
 Deve aparecer a mensagem "Detetado um comando Hello World!" impressa no console, seguida pela visualização da árvore de análise sintática
 
 
-Video: [https://youtu.be/Dbs-P95D0Q4](https://youtu.be/wdyRhklgEso)
+Video: [https://youtu.be/dwi4CDZWNkM](https://youtu.be/dwi4CDZWNkM)
 
 O projeto foi feito em Python com ANTLR
 
