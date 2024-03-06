@@ -50,7 +50,7 @@ Instalamos as bibliotecas Python necessárias:
 
 ## 4. Escrever e executar o Script de Teste em Python
 
-TesteHelloWorld.py. Este script carrega a entrada print("Hello, World!"), executa a análise sintática, e visualiza a árvore de análise resultante.
+TesteHelloWorld.py (Esta todo comentado). Este script carrega a entrada print("Hello, World!"), executa a análise sintática, e visualiza a árvore de análise resultante.
 
 <pre> python3 TesteHelloWorld.py </pre>
 
